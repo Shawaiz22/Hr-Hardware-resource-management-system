@@ -1,17 +1,4 @@
 package hr_hardware_resources_management_system;
-/*
-create table employee(
-emp_id int primary key auto_increment,
-name varchar(40),
-age int,
-address varchar(100),
-mobileNo varchar(10),
-currentstatus varchar(20)
-);
- 
-String currentstatus[employed,resigned,retired] 
- 
-*/
 
 public class Employee {
 	
