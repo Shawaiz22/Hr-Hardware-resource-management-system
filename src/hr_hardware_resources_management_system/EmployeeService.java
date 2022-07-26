@@ -121,28 +121,28 @@ public class EmployeeService {
 			System.out.println("Enter employee id to update his information: ");
 			int emp_id=sc.nextInt();
 			
-			String selectquery="select * from employee where emp_id="+emp_id+" and currentstatus=employed";
+			String selectquery="select * from employee where emp_id="+emp_id+" and currentstatus='employed'";
 			boolean res=classDb.checkRecordExists(selectquery);
 	
 		if(res==true) {	
 			System.out.println("Which information do you want to update? (address/mobile_no/age): ");
 			String info=br.readLine();
 			
-			if(info=="address") {
+			if(info.equals("address")) {
 				System.out.print("Enter new employee address: ");
 				String address=br.readLine();
 				String query="update employee set adress='"+address+"' where emp_id="+emp_id;
 				classDb.dmlQuery(query);
 				return "\nEmployee address updated";
 			}
-			else if(info=="mobile_no") {
+			else if(info.equals("mobile_no")) {
 				System.out.print("Enter new mobile_no: ");
 				String mobile_no=sc.next();
 				String query="update employee set mobileNo='"+mobile_no+"' where emp_id="+emp_id;
 				classDb.dmlQuery(query);
 				return "\nEmployee's mobile number updated";
 			}
-			else if(info=="age") {
+			else if(info.equals("age")) {
 				System.out.print("Enter new age: ");
 				int age=sc.nextInt();
 				String query="\nupdate employee set age="+age+" where emp_id="+emp_id;
