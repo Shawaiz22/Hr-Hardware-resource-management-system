@@ -24,11 +24,12 @@ public class Main {
 			System.out.println("8. Update Resignation/Retirement Status of Employee");
 			System.out.println("9. Update the existing machine information");
 			System.out.println("10. View History of old Machine");
-			System.out.println("11. Update employee information");
-			System.out.println("12. Show report of employees and booked machines");
-			System.out.println("13. Exit the program***");
+			System.out.println("11. Update status if a machine has got scrapped");
+			System.out.println("12. Update employee information");
+			System.out.println("13. Show report of employees and booked machines");
+			System.out.println("14. Exit the program***");
 			
-			System.out.printf("\n\n Enter your choice(1/2/3/4/5/6/7/8/9/10/11/12/13): ");
+			System.out.printf("\n\n Enter your choice(1/2/3/4/5/6/7/8/9/10/11/12/13/14): ");
 			int choice=sc.nextInt();
 			
 			switch(choice) {
@@ -76,15 +77,18 @@ public class Main {
 						System.out.println("=============================================================================");
 						break;
 					case 11:
-						System.out.println(employeeService.updateEmployee());
+						System.out.println(machineService.setScrapStatus());
 						break;
 					case 12:
+						System.out.println(employeeService.updateEmployee());
+						break;
+					case 13:
 						System.out.println("REPORT***");
 						System.out.println("=============================================================================");
 						System.out.println(machineService.machineReport());
 						System.out.println("=============================================================================");
 						break;
-					case 13:	
+					case 14:	
 						System.out.println("Thanks for using my Software***");
 						System.exit(0);
 					default:
