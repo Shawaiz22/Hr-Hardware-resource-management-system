@@ -48,6 +48,7 @@ public class MachineBookingService {
 	        	query="update machine set currentstatus='booked' where id= "+mb.getMachine_id();
 	        	result2=cd.dmlQuery(query);
 	        	System.out.println();
+	        	return "\n Machine Booked to Employee!! "+"\n Machine status updated in machine table";
 	        }
 	        else {System.out.println("\nInvalid Id or status of the employee is: "+res1);
 	        	  System.out.println("Invalid Id or status of the machine is: "+res2);
@@ -58,7 +59,7 @@ public class MachineBookingService {
 	    catch(Exception e) {
 	    	result1=e.toString();
 	    }
-	    return "\n Machine Booked to Employee!! "+"\n Machine status updated in machine table";
+	    return "";
 	}
 	
 	// Displays the full booking information
@@ -111,7 +112,7 @@ public class MachineBookingService {
 		catch(Exception e) {
 			res1=e.toString();
 		}
-		return res1;
+		return "";
 	}
 	
 
