@@ -10,7 +10,7 @@
 
  To run this application->
 
- 1. Clone the repository
+ 1. Clone the repository/ download zip files.
  2. Open it in eclipse ide. 
  3. Paste the .jar file(mysql-connector-java-8.0.11.jar) in the module path inside java build path of the package.
  4. Install xampp in your pc
