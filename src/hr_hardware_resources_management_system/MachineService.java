@@ -170,15 +170,18 @@ public class MachineService {
 			System.out.println("Enter machine id to set scrap status of a machine: ");
 			int id=sc.nextInt();
 			
-			String selectquery="select * from machinebooking where machine_id="+id+" and currentstatus='closed'";
-			boolean res=classDb.checkRecordExists(selectquery);
+			String selectquery="select * from machinebooking where machine_id="+id+" and currentstatus='closed' ";
+			boolean res1=classDb.checkRecordExists(selectquery);
 			
-			if(res==true) {
+			selectquery="select * from machine where id="+id+" and currentstatus='available' ";
+			boolean res2=classDb.checkRecordExists(selectquery);
+			
+			if(res1==true && res2==true) {
 				String query="update machine set currentstatus='scrapped' where id="+id;
 				classDb.dmlQuery(query);
 				return "\n Machine status set to scrapped!!!";
 			}
-			else {return "Machine is booked to a employee, can't be set to scrapped";
+			else {return "\n Machine is booked to a employee, can't be set to scrapped";
 			}
 		}
 		catch(Exception e) {
