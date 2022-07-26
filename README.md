@@ -14,7 +14,7 @@
  2. Open it in eclipse ide. 
  3. Paste the .jar file(mysql-connector-java-8.0.11.jar) in the module path inside java build path of the package.
  4. Install xampp in your pc
- 5. Open C:\xampp\mysql\data and paste the 'hrmanagement-sql' folder in it
+ 5. Open C:\xampp\mysql\data and paste the 'hrmanagement-sql' folder in it or import the sql file.
  6. Open xampp-> run mysql and apache server
  
  7. Now run Main.java in eclipse--> 
